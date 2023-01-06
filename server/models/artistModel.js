@@ -5,10 +5,12 @@ const artistSchema = new Schema({
     type: String,
     required: true,
   },
-  image: {
-    type: String,
-    ref: "image",
-  },
+  image: [
+    {
+      type: String,
+      ref: "image",
+    },
+  ],
 
   creator: {
     type: Schema.Types.ObjectId,
