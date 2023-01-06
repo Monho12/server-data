@@ -1,0 +1,2 @@
+# server-data
+notSpotify server
