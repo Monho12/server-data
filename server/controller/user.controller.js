@@ -3,8 +3,12 @@ const { User } = require("../models/userModel");
 const createUser = async (req, res) => {
   const body = req.body;
   try {
-    const result = await new User(body).save();
-    res.send(result);
+    if (body !== null) {
+      const result = await new User(body).save();
+      res.send(result);
+    } else {
+      console.log("Invalid request");
+    }
   } catch (error) {}
 };
 
